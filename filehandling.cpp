@@ -147,7 +147,7 @@ using namespace std;
 int main() {
     ofstream outeven("even.txt",ios::out);
     ofstream outodd("odd.txt",ios::out);
-    ifstream in("Abdullah.txt",ios::in);
+    ifstream in("Abdullah_1.txt",ios::in);
     int arr[15];
     int evenidx=0,oddidx= 0;
     if(!in){
