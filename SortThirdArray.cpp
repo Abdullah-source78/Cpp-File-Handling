@@ -33,34 +33,22 @@ int main() {
        
     }
     in2.close();
+     int count1=0;
+    for (int p = 0;p<SingleSIZE;p++){
+        arr3[count1++] = arr1[p];
+    }
+    int count2=SingleSIZE;
+    for (int h = 0;h<SingleSIZE;h++){
+            arr3[count2++] = arr1[h];
+    
+    }
 
-    // SELECTION SORT
-    for(int i= 0; i<SingleSIZE-1; i++)
-    {
-        for(int j= 0; j<SingleSIZE-1-i; j++)
-        {
-            if(arr1[j] > arr1[j+1])
-                swap(arr1[j], arr1[j+1]);
-
-            if(arr2[j] > arr2[j+1])
-                swap(arr2[j], arr2[j+1]);    
+    for (int i = 0;i<SIZE-1;i++){
+        for(int j = 0;j<SIZE-i-1;j++){
+            if(arr3[j]>arr3[j+1]){
+                swap(arr3[j],arr3[j+1]);
+            }
         }
-    }
-
-
-    int i = 0, j = 0, k = 0;
-    while (i < SingleSIZE && j < SingleSIZE) {
-        if (arr1[i] < arr2[j]) {
-            arr3[k++] = arr1[i++];
-        } else {
-            arr3[k++] = arr2[j++];
-        }
-    }
-    while (i < SingleSIZE) {
-        arr3[k++] = arr1[i++];
-    }
-    while (j < SingleSIZE) {
-        arr3[k++] = arr2[j++];
     }
 
     ofstream out("Sorted_Array.txt", ios::app);
